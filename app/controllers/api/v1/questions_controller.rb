@@ -4,9 +4,9 @@ class Api::V1::QuestionsController < ApplicationController
   end
 
   def show
-    @question = Question.find(params[:id]) rescue nil
-    if @question 
-      render json: @question
+    question = Question.find(params[:id]) rescue nil
+    if question 
+      render json: question
     else
       render json: {message: 'record misssing', status: 422}
     end
@@ -25,8 +25,13 @@ class Api::V1::QuestionsController < ApplicationController
   end
 
   def destroy
-    Question.destroy(params[:id])
-    render json: {message: 'deleted'}
+    question = Question.find(params[:id]) rescue nil
+    if question
+      question.destroy
+      render json: {message: 'deleted'}
+    else
+      render json: {message: 'record not found', status: 422}
+    end
   end
 
   def update
