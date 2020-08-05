@@ -1,0 +1,9 @@
+
+<%= flash[:notice]%>
+
+<%= form_with(url: {action: 'import'}, multipart: true) do %>
+  <%= file_field_tag 'file' %>
+<%= submit_tag "import"%>
+<%end%>
+
+<div id="root" data-fruits="<%= @question.to_json %>"></div>

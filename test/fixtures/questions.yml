@@ -1,0 +1,39 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  question: MyString
+  text: MyString
+  teamin_stages: MyString
+  appears: MyString
+  integer: MyString
+  frequency: MyString
+  integer: MyString
+  type: 
+  string: MyString
+  role_id: MyString
+  integer: MyString
+  required: MyString
+  boolean: MyString
+  Conditions: MyString
+  string: MyString
+  mapping_id: MyString
+  integer: MyString
+
+two:
+  question: MyString
+  text: MyString
+  teamin_stages: MyString
+  appears: MyString
+  integer: MyString
+  frequency: MyString
+  integer: MyString
+  type: 
+  string: MyString
+  role_id: MyString
+  integer: MyString
+  required: MyString
+  boolean: MyString
+  Conditions: MyString
+  string: MyString
+  mapping_id: MyString
+  integer: MyString
