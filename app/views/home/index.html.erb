@@ -1,9 +1,23 @@
+<html>
+ <head>
+  <style>
+  	.form{
+  		width:30%;
+  		padding: 10%;
+  		background-color:grey;
+  		margin: 0 auto;
+  	 }
+  </style>
+ </head>
+ <body>
+  <div class="form">
+  	<h1> please upload the csv</h1>
+   <%= flash[:notice]%>
 
-<%= flash[:notice]%>
-
-<%= form_with(url: {action: 'import'}, multipart: true) do %>
-  <%= file_field_tag 'file' %>
-<%= submit_tag "import"%>
-<%end%>
-
-<div id="root" data-fruits="<%= @question.to_json %>"></div>
+   <%= form_with(url: {action: 'import'}, multipart: true) do %>
+     <%= file_field_tag 'file' %>
+     <%= submit_tag "import"%>
+   <%end%>
+  <div id="root" data-questions="<%= @question.to_json %>"></div>
+ </body>
+</html>

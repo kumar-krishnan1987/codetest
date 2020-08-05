@@ -8,7 +8,7 @@ const AllQuestions = (props) => {
   })
 
   return(
-  <table>
+  <table border="1px">
   <tr>
   <td>Question</td>
   <td>Teaming Stages</td>

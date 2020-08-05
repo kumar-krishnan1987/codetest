@@ -24,7 +24,9 @@ class HomeController < ApplicationController
      end
      redirect_to root_path
   end
+
   def list
   end
+  
 end
 	

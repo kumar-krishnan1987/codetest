@@ -50,7 +50,7 @@ class Question extends React.Component{
        defaultValue={this.props.question.required}/>:<p>{this.props.question.required}</p>
        let conditions = this.state.editable ? <input type='text' ref={input => this.conditions = input}
        defaultValue={this.props.question.conditions}/>:<p>{this.props.question.conditions}</p>
-       let mapping = this.state.editable ? <input type='text  ' ref={input => this.mapping = input}
+       let mapping = this.state.editable ? <input type='text' ref={input => this.mapping = input}
        defaultValue={this.props.question.mapping}/>:<p>{this.props.question.mapping}</p>
        return(
        
@@ -63,8 +63,6 @@ class Question extends React.Component{
         <td>{required}</td>
         <td>{conditions}</td>
         <td>{mapping}</td>
-        <td><button onClick={() => this.handleEdit()}>{this.state.editable? 'Submit' : 'Edit'}</button></td>
-        <td><button onClick={() => this.props.handleDelete(this.props.question.id)}>Delete</button></td>
         </tr>
     ) 
   }
